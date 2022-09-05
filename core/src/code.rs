@@ -19,7 +19,7 @@
 //! Module for checked code.
 
 use crate::{ids::CodeId, memory::WasmPageNumber, message::DispatchKind};
-use alloc::{collections::BTreeSet, vec::Vec};
+use alloc::{collections::BTreeSet, vec::Vec, string::{ToString, String}};
 use codec::{Decode, Encode};
 use parity_wasm::elements::{Internal, Module};
 use scale_info::TypeInfo;
@@ -70,7 +70,7 @@ pub enum CodeError {
     ///
     /// The provided code was a malformed Wasm bytecode or contained unsupported features
     /// (atomics, simd instructions, etc.).
-    Decode,
+    Decode(String),
     /// Error occurred during injecting gas metering instructions.
     ///
     /// This might be due to program contained unsupported/non-deterministic instructions
@@ -111,8 +111,8 @@ impl Code {
         R: Rules,
         GetRulesFn: FnMut(&Module) -> R,
     {
-        let module: Module = wasm_instrument::parity_wasm::deserialize_buffer(&raw_code)
-            .map_err(|_| CodeError::Decode)?;
+        let module = wasm_instrument::parity_wasm::deserialize_buffer::<Module>(&raw_code)
+            .map_err(|err| CodeError::Decode(err.to_string()))?;
 
         if module.start_section().is_some() {
             log::debug!("Found start section in contract code, which is not allowed");
@@ -172,8 +172,8 @@ impl Code {
         instrument_with_const_rules: bool,
     ) -> Result<Self, CodeError> {
         let module = module.unwrap_or(
-            wasm_instrument::parity_wasm::deserialize_buffer(&original_code)
-                .map_err(|_| CodeError::Decode)?,
+            wasm_instrument::parity_wasm::deserialize_buffer::<Module>(&original_code)
+                .map_err(|err| CodeError::Decode(err.to_string()))?,
         );
 
         // get initial memory size from memory import.
