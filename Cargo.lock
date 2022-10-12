@@ -3000,7 +3000,7 @@ dependencies = [
  "serde",
  "serde_json",
  "subxt",
- "subxt-codegen",
+ "subxt-codegen 0.22.0",
  "syn",
  "thiserror",
  "tokio",
@@ -3156,7 +3156,7 @@ dependencies = [
  "gear-runtime-interface",
  "gear-runtime-primitives",
  "hex-literal",
- "jsonrpsee 0.15.1",
+ "jsonrpsee",
  "log",
  "pallet-gear-rpc",
  "pallet-gear-rpc-runtime-api",
@@ -3977,20 +3977,11 @@ dependencies = [
 
 [[package]]
 name = "jsonrpsee"
-version = "0.14.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "11e017217fcd18da0a25296d3693153dd19c8a6aadab330b3595285d075385d1"
-dependencies = [
- "jsonrpsee-client-transport 0.14.0",
- "jsonrpsee-core 0.14.0",
-]
-
-[[package]]
-name = "jsonrpsee"
 version = "0.15.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8bd0d559d5e679b1ab2f869b486a11182923863b1b3ee8b421763cdd707b783a"
 dependencies = [
+ "jsonrpsee-client-transport 0.15.1",
  "jsonrpsee-core 0.15.1",
  "jsonrpsee-http-server",
  "jsonrpsee-proc-macros",
@@ -4011,14 +4002,11 @@ dependencies = [
  "jsonrpsee-core 0.14.0",
  "jsonrpsee-types 0.14.0",
  "pin-project",
- "rustls-native-certs",
  "soketto",
  "thiserror",
  "tokio",
- "tokio-rustls",
  "tokio-util",
  "tracing",
- "webpki-roots",
 ]
 
 [[package]]
@@ -4049,19 +4037,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "16efcd4477de857d4a2195a45769b2fe9ebb54f3ef5a4221d3b014a4fe33ec0b"
 dependencies = [
  "anyhow",
- "async-lock",
  "async-trait",
  "beef",
  "futures-channel",
- "futures-timer",
  "futures-util",
  "jsonrpsee-types 0.14.0",
- "rustc-hash",
  "serde",
  "serde_json",
  "thiserror",
- "tokio",
- "tracing",
 ]
 
 [[package]]
@@ -6428,7 +6411,7 @@ version = "2.0.0"
 dependencies = [
  "gear-common",
  "gear-core",
- "jsonrpsee 0.15.1",
+ "jsonrpsee",
  "pallet-gear-rpc-runtime-api",
  "sp-api",
  "sp-blockchain",
@@ -6572,7 +6555,7 @@ name = "pallet-transaction-payment-rpc"
 version = "4.0.0-dev"
 source = "git+https://github.com/gear-tech/substrate.git?branch=gear-stable#584706a5b850f3b469ca16bffb8b6a86f29aa8b9"
 dependencies = [
- "jsonrpsee 0.15.1",
+ "jsonrpsee",
  "pallet-transaction-payment-rpc-runtime-api",
  "parity-scale-codec",
  "sp-api",
@@ -7600,7 +7583,7 @@ version = "0.10.0-dev"
 source = "git+https://github.com/gear-tech/substrate.git?branch=gear-stable#584706a5b850f3b469ca16bffb8b6a86f29aa8b9"
 dependencies = [
  "env_logger",
- "jsonrpsee 0.15.1",
+ "jsonrpsee",
  "log",
  "parity-scale-codec",
  "serde",
@@ -8099,7 +8082,7 @@ version = "0.10.0-dev"
 source = "git+https://github.com/gear-tech/substrate.git?branch=gear-stable#584706a5b850f3b469ca16bffb8b6a86f29aa8b9"
 dependencies = [
  "futures",
- "jsonrpsee 0.15.1",
+ "jsonrpsee",
  "sc-consensus-babe",
  "sc-consensus-epochs",
  "sc-rpc-api",
@@ -8282,7 +8265,7 @@ source = "git+https://github.com/gear-tech/substrate.git?branch=gear-stable#5847
 dependencies = [
  "finality-grandpa",
  "futures",
- "jsonrpsee 0.15.1",
+ "jsonrpsee",
  "log",
  "parity-scale-codec",
  "sc-client-api",
@@ -8566,7 +8549,7 @@ source = "git+https://github.com/gear-tech/substrate.git?branch=gear-stable#5847
 dependencies = [
  "futures",
  "hash-db",
- "jsonrpsee 0.15.1",
+ "jsonrpsee",
  "log",
  "parity-scale-codec",
  "parking_lot 0.12.1",
@@ -8595,7 +8578,7 @@ version = "0.10.0-dev"
 source = "git+https://github.com/gear-tech/substrate.git?branch=gear-stable#584706a5b850f3b469ca16bffb8b6a86f29aa8b9"
 dependencies = [
  "futures",
- "jsonrpsee 0.15.1",
+ "jsonrpsee",
  "log",
  "parity-scale-codec",
  "parking_lot 0.12.1",
@@ -8618,7 +8601,7 @@ version = "4.0.0-dev"
 source = "git+https://github.com/gear-tech/substrate.git?branch=gear-stable#584706a5b850f3b469ca16bffb8b6a86f29aa8b9"
 dependencies = [
  "futures",
- "jsonrpsee 0.15.1",
+ "jsonrpsee",
  "log",
  "serde_json",
  "substrate-prometheus-endpoint",
@@ -8631,7 +8614,7 @@ version = "0.10.0-dev"
 source = "git+https://github.com/gear-tech/substrate.git?branch=gear-stable#584706a5b850f3b469ca16bffb8b6a86f29aa8b9"
 dependencies = [
  "hex",
- "jsonrpsee 0.15.1",
+ "jsonrpsee",
  "sc-chain-spec",
 ]
 
@@ -8646,7 +8629,7 @@ dependencies = [
  "futures",
  "futures-timer",
  "hash-db",
- "jsonrpsee 0.15.1",
+ "jsonrpsee",
  "log",
  "parity-scale-codec",
  "parity-util-mem",
@@ -8724,7 +8707,7 @@ name = "sc-sync-state-rpc"
 version = "0.10.0-dev"
 source = "git+https://github.com/gear-tech/substrate.git?branch=gear-stable#584706a5b850f3b469ca16bffb8b6a86f29aa8b9"
 dependencies = [
- "jsonrpsee 0.15.1",
+ "jsonrpsee",
  "parity-scale-codec",
  "sc-chain-spec",
  "sc-client-api",
@@ -8870,6 +8853,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "scale-decode"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c70dece385bc3e5918109830d9509806b5d4525fdf594e3463078c529122979e"
+dependencies = [
+ "bitvec",
+ "parity-scale-codec",
+ "scale-info",
+ "thiserror",
+]
+
+[[package]]
 name = "scale-info"
 version = "2.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -8893,6 +8888,23 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "scale-value"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "eae8b296b3ebcb3425661e9b612ccc34cb1064483a61dc379c65e6b1463498f1"
+dependencies = [
+ "bitvec",
+ "either",
+ "frame-metadata",
+ "parity-scale-codec",
+ "scale-decode",
+ "scale-info",
+ "serde",
+ "thiserror",
+ "yap",
 ]
 
 [[package]]
@@ -10541,7 +10553,7 @@ source = "git+https://github.com/gear-tech/substrate.git?branch=gear-stable#5847
 dependencies = [
  "frame-system-rpc-runtime-api",
  "futures",
- "jsonrpsee 0.15.1",
+ "jsonrpsee",
  "log",
  "parity-scale-codec",
  "sc-client-api",
@@ -10573,7 +10585,7 @@ name = "substrate-state-trie-migration-rpc"
 version = "4.0.0-dev"
 source = "git+https://github.com/gear-tech/substrate.git?branch=gear-stable#584706a5b850f3b469ca16bffb8b6a86f29aa8b9"
 dependencies = [
- "jsonrpsee 0.15.1",
+ "jsonrpsee",
  "log",
  "parity-scale-codec",
  "sc-client-api",
@@ -10640,25 +10652,27 @@ checksum = "6bdef32e8150c2a081110b42772ffe7d7c9032b606bc226c8260fd97e0976601"
 
 [[package]]
 name = "subxt"
-version = "0.22.0"
+version = "0.23.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e731c0245979a80f9090a89b43635e23f367f13a225695f286f307978db36f11"
+checksum = "8d5d7eafcc9b412a74269e0eaa413e9228d8b9da812e0d29c43c883da9b98b57"
 dependencies = [
  "bitvec",
  "derivative",
  "frame-metadata",
  "futures",
  "hex",
- "jsonrpsee 0.14.0",
+ "jsonrpsee",
  "parity-scale-codec",
  "parking_lot 0.12.1",
+ "scale-decode",
  "scale-info",
+ "scale-value",
  "serde",
  "serde_json",
  "sp-core 6.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "sp-runtime 6.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "subxt-macro",
- "subxt-metadata",
+ "subxt-metadata 0.23.0",
  "thiserror",
  "tracing",
 ]
@@ -10677,19 +10691,37 @@ dependencies = [
  "proc-macro2",
  "quote",
  "scale-info",
- "subxt-metadata",
+ "subxt-metadata 0.22.0",
+ "syn",
+]
+
+[[package]]
+name = "subxt-codegen"
+version = "0.23.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d024e9b6fec95eba52fbe4512bf95b0ad079be3792ab190eec478d1731a17358"
+dependencies = [
+ "darling",
+ "frame-metadata",
+ "heck 0.4.0",
+ "parity-scale-codec",
+ "proc-macro-error",
+ "proc-macro2",
+ "quote",
+ "scale-info",
+ "subxt-metadata 0.23.0",
  "syn",
 ]
 
 [[package]]
 name = "subxt-macro"
-version = "0.22.0"
+version = "0.23.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "38521809516f4c244b6f38ed13fc67ef6ada29a846fa26123a4206ff743f3461"
+checksum = "18dbe609475b86207792e1021a4f958e0381ebc2c17cf4eddd4d885883b96f8a"
 dependencies = [
  "darling",
  "proc-macro-error",
- "subxt-codegen",
+ "subxt-codegen 0.23.0",
  "syn",
 ]
 
@@ -10698,6 +10730,18 @@ name = "subxt-metadata"
 version = "0.22.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "37b01bac35f2524ce590fa1438fb6c81a63df1b4c94f686be391afd8d02615b3"
+dependencies = [
+ "frame-metadata",
+ "parity-scale-codec",
+ "scale-info",
+ "sp-core 6.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "subxt-metadata"
+version = "0.23.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1b7b9f8c2b42d3626dc18856727fc23cf6a04c4c044507735f55110e44a3986c"
 dependencies = [
  "frame-metadata",
  "parity-scale-codec",
@@ -11231,7 +11275,7 @@ source = "git+https://github.com/gear-tech/substrate.git?branch=gear-stable#5847
 dependencies = [
  "clap 3.2.22",
  "frame-try-runtime",
- "jsonrpsee 0.15.1",
+ "jsonrpsee",
  "log",
  "parity-scale-codec",
  "remote-externalities",
@@ -12601,6 +12645,12 @@ dependencies = [
  "rand 0.8.5",
  "static_assertions",
 ]
+
+[[package]]
+name = "yap"
+version = "0.7.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5fc77f52dc9e9b10d55d3f4462c3b7fc393c4f17975d641542833ab2d3bc26ef"
 
 [[package]]
 name = "zbus"
