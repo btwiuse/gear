@@ -868,13 +868,28 @@ checksum = "86447ad904c7fb335a790c9d7fe3d0d971dc523b8ccd1561a520de9a85302750"
 dependencies = [
  "atty",
  "bitflags",
- "clap_derive",
- "clap_lex",
+ "clap_derive 3.2.18",
+ "clap_lex 0.2.4",
  "indexmap",
  "once_cell",
  "strsim 0.10.0",
  "termcolor",
  "textwrap 0.15.1",
+]
+
+[[package]]
+name = "clap"
+version = "4.0.13"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "69d64e88428747154bd8bc378d178377ef4dace7a5735ca1f3855be72f2c2cb5"
+dependencies = [
+ "atty",
+ "bitflags",
+ "clap_derive 4.0.13",
+ "clap_lex 0.3.0",
+ "once_cell",
+ "strsim 0.10.0",
+ "termcolor",
 ]
 
 [[package]]
@@ -891,10 +906,32 @@ dependencies = [
 ]
 
 [[package]]
+name = "clap_derive"
+version = "4.0.13"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c42f169caba89a7d512b5418b09864543eeb4d497416c917d7137863bd2076ad"
+dependencies = [
+ "heck 0.4.0",
+ "proc-macro-error",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "clap_lex"
 version = "0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2850f2f5a82cbf437dd5af4d49848fbdfc27c157c3d010345776f952765261c5"
+dependencies = [
+ "os_str_bytes",
+]
+
+[[package]]
+name = "clap_lex"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0d4198f73e42b4936b35b5bb248d81d2b595ecb170da0bac7655c54eedfa8da8"
 dependencies = [
  "os_str_bytes",
 ]
@@ -2826,7 +2863,7 @@ dependencies = [
 name = "gear-cli"
 version = "0.1.0"
 dependencies = [
- "clap 3.2.22",
+ "clap 4.0.13",
  "frame-benchmarking",
  "frame-benchmarking-cli",
  "frame-system",
@@ -2987,7 +3024,7 @@ dependencies = [
  "base64",
  "blake2-rfc",
  "cfg-if",
- "clap 3.2.22",
+ "clap 4.0.13",
  "color-eyre",
  "demo-meta",
  "dirs",
@@ -2997,7 +3034,7 @@ dependencies = [
  "gear-core",
  "gear-runtime",
  "hex",
- "jsonrpsee-client-transport 0.15.1",
+ "jsonrpsee-client-transport",
  "keyring",
  "lazy_static",
  "libp2p 0.48.0",
@@ -3118,7 +3155,7 @@ name = "gear-runtime-test-cli"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "clap 3.2.22",
+ "clap 4.0.13",
  "colored",
  "frame-support",
  "frame-system",
@@ -3230,7 +3267,7 @@ name = "gear-test"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "clap 3.2.22",
+ "clap 4.0.13",
  "colored",
  "derive_more",
  "env_logger",
@@ -3993,31 +4030,13 @@ version = "0.15.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8bd0d559d5e679b1ab2f869b486a11182923863b1b3ee8b421763cdd707b783a"
 dependencies = [
- "jsonrpsee-client-transport 0.15.1",
- "jsonrpsee-core 0.15.1",
+ "jsonrpsee-client-transport",
+ "jsonrpsee-core",
  "jsonrpsee-http-server",
  "jsonrpsee-proc-macros",
- "jsonrpsee-types 0.15.1",
+ "jsonrpsee-types",
  "jsonrpsee-ws-client",
  "jsonrpsee-ws-server",
- "tracing",
-]
-
-[[package]]
-name = "jsonrpsee-client-transport"
-version = "0.14.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ce395539a14d3ad4ec1256fde105abd36a2da25d578a291cabe98f45adfdb111"
-dependencies = [
- "futures-util",
- "http",
- "jsonrpsee-core 0.14.0",
- "jsonrpsee-types 0.14.0",
- "pin-project",
- "soketto",
- "thiserror",
- "tokio",
- "tokio-util",
  "tracing",
 ]
 
@@ -4029,8 +4048,8 @@ checksum = "8752740ecd374bcbf8b69f3e80b0327942df76f793f8d4e60d3355650c31fb74"
 dependencies = [
  "futures-util",
  "http",
- "jsonrpsee-core 0.15.1",
- "jsonrpsee-types 0.15.1",
+ "jsonrpsee-core",
+ "jsonrpsee-types",
  "pin-project",
  "rustls-native-certs",
  "soketto",
@@ -4040,23 +4059,6 @@ dependencies = [
  "tokio-util",
  "tracing",
  "webpki-roots",
-]
-
-[[package]]
-name = "jsonrpsee-core"
-version = "0.14.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "16efcd4477de857d4a2195a45769b2fe9ebb54f3ef5a4221d3b014a4fe33ec0b"
-dependencies = [
- "anyhow",
- "async-trait",
- "beef",
- "futures-channel",
- "futures-util",
- "jsonrpsee-types 0.14.0",
- "serde",
- "serde_json",
- "thiserror",
 ]
 
 [[package]]
@@ -4076,7 +4078,7 @@ dependencies = [
  "globset",
  "http",
  "hyper",
- "jsonrpsee-types 0.15.1",
+ "jsonrpsee-types",
  "lazy_static",
  "parking_lot 0.12.1",
  "rand 0.8.5",
@@ -4100,8 +4102,8 @@ dependencies = [
  "futures-channel",
  "futures-util",
  "hyper",
- "jsonrpsee-core 0.15.1",
- "jsonrpsee-types 0.15.1",
+ "jsonrpsee-core",
+ "jsonrpsee-types",
  "serde",
  "serde_json",
  "tokio",
@@ -4119,20 +4121,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
-]
-
-[[package]]
-name = "jsonrpsee-types"
-version = "0.14.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3bcf76cd316f5d3ad48138085af1f45e2c58c98e02f0779783dbb034d43f7c86"
-dependencies = [
- "anyhow",
- "beef",
- "serde",
- "serde_json",
- "thiserror",
- "tracing",
 ]
 
 [[package]]
@@ -4156,9 +4144,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6ee5feddd5188e62ac08fcf0e56478138e581509d4730f3f7be9b57dd402a4ff"
 dependencies = [
  "http",
- "jsonrpsee-client-transport 0.15.1",
- "jsonrpsee-core 0.15.1",
- "jsonrpsee-types 0.15.1",
+ "jsonrpsee-client-transport",
+ "jsonrpsee-core",
+ "jsonrpsee-types",
 ]
 
 [[package]]
@@ -4170,8 +4158,8 @@ dependencies = [
  "futures-channel",
  "futures-util",
  "http",
- "jsonrpsee-core 0.15.1",
- "jsonrpsee-types 0.15.1",
+ "jsonrpsee-core",
+ "jsonrpsee-types",
  "serde_json",
  "soketto",
  "tokio",
@@ -7589,7 +7577,7 @@ dependencies = [
 name = "regression-analysis"
 version = "0.1.0"
 dependencies = [
- "clap 3.2.22",
+ "clap 4.0.13",
  "frame-support",
  "gear-runtime",
  "junit-common",
@@ -11332,7 +11320,7 @@ checksum = "97fee6b57c6a41524a810daee9286c02d7752c4253064d0b05472833a438f675"
 dependencies = [
  "cfg-if",
  "digest 0.10.5",
- "rand 0.7.3",
+ "rand 0.8.5",
  "static_assertions",
 ]
 
@@ -11780,7 +11768,7 @@ dependencies = [
 name = "wasm-proc"
 version = "0.1.0"
 dependencies = [
- "clap 3.2.22",
+ "clap 4.0.13",
  "env_logger",
  "gear-wasm-builder",
  "log",
