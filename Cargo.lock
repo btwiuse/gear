@@ -879,9 +879,9 @@ dependencies = [
 
 [[package]]
 name = "clap"
-version = "4.0.13"
+version = "4.0.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "69d64e88428747154bd8bc378d178377ef4dace7a5735ca1f3855be72f2c2cb5"
+checksum = "6ea54a38e4bce14ff6931c72e5b3c43da7051df056913d4e7e1fcdb1c03df69d"
 dependencies = [
  "atty",
  "bitflags",
@@ -2876,7 +2876,7 @@ dependencies = [
 name = "gear-cli"
 version = "0.1.0"
 dependencies = [
- "clap 4.0.13",
+ "clap 4.0.14",
  "frame-benchmarking",
  "frame-benchmarking-cli",
  "frame-system",
@@ -3037,7 +3037,7 @@ dependencies = [
  "base64",
  "blake2-rfc",
  "cfg-if",
- "clap 4.0.13",
+ "clap 4.0.14",
  "color-eyre",
  "demo-meta",
  "dirs",
@@ -3168,7 +3168,7 @@ name = "gear-runtime-test-cli"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "clap 4.0.13",
+ "clap 4.0.14",
  "colored",
  "frame-support",
  "frame-system",
@@ -3280,7 +3280,7 @@ name = "gear-test"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "clap 4.0.13",
+ "clap 4.0.14",
  "colored",
  "derive_more",
  "env_logger",
@@ -7602,7 +7602,7 @@ dependencies = [
 name = "regression-analysis"
 version = "0.1.0"
 dependencies = [
- "clap 4.0.13",
+ "clap 4.0.14",
  "frame-support",
  "gear-runtime",
  "junit-common",
@@ -11793,7 +11793,7 @@ dependencies = [
 name = "wasm-proc"
 version = "0.1.0"
 dependencies = [
- "clap 4.0.13",
+ "clap 4.0.14",
  "env_logger",
  "gear-wasm-builder",
  "log",
