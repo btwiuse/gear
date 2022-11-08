@@ -879,13 +879,13 @@ dependencies = [
 
 [[package]]
 name = "clap"
-version = "4.0.13"
+version = "4.0.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "69d64e88428747154bd8bc378d178377ef4dace7a5735ca1f3855be72f2c2cb5"
+checksum = "91b9970d7505127a162fdaa9b96428d28a479ba78c9ec7550a63a5d9863db682"
 dependencies = [
  "atty",
  "bitflags",
- "clap_derive 4.0.13",
+ "clap_derive 4.0.21",
  "clap_lex 0.3.0",
  "once_cell",
  "strsim 0.10.0",
@@ -907,9 +907,9 @@ dependencies = [
 
 [[package]]
 name = "clap_derive"
-version = "4.0.13"
+version = "4.0.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c42f169caba89a7d512b5418b09864543eeb4d497416c917d7137863bd2076ad"
+checksum = "0177313f9f02afc995627906bbd8967e2be069f5261954222dac78290c2b9014"
 dependencies = [
  "heck 0.4.0",
  "proc-macro-error",
@@ -2876,7 +2876,7 @@ dependencies = [
 name = "gear-cli"
 version = "0.1.0"
 dependencies = [
- "clap 4.0.13",
+ "clap 4.0.22",
  "frame-benchmarking",
  "frame-benchmarking-cli",
  "frame-system",
@@ -3037,7 +3037,7 @@ dependencies = [
  "base64",
  "blake2-rfc",
  "cfg-if",
- "clap 4.0.13",
+ "clap 4.0.22",
  "color-eyre",
  "demo-meta",
  "dirs",
@@ -3168,7 +3168,7 @@ name = "gear-runtime-test-cli"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "clap 4.0.13",
+ "clap 4.0.22",
  "colored",
  "frame-support",
  "frame-system",
@@ -3280,7 +3280,7 @@ name = "gear-test"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "clap 4.0.13",
+ "clap 4.0.22",
  "colored",
  "derive_more",
  "env_logger",
@@ -7602,7 +7602,7 @@ dependencies = [
 name = "regression-analysis"
 version = "0.1.0"
 dependencies = [
- "clap 4.0.13",
+ "clap 4.0.22",
  "frame-support",
  "gear-runtime",
  "junit-common",
@@ -11793,7 +11793,7 @@ dependencies = [
 name = "wasm-proc"
 version = "0.1.0"
 dependencies = [
- "clap 4.0.13",
+ "clap 4.0.22",
  "env_logger",
  "gear-wasm-builder",
  "log",
