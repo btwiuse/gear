@@ -42,7 +42,7 @@ clap = { version = "3.2", features = ["derive"], optional = true }
 subxt = "0.24.0"
 thiserror = "1.0.37"
 tokio = { version = "1.22.0", features = [ "full" ] }
-wasmtime = "1"
+wasmtime = "3"
 whoami = "1.2.1"
 
 [dev-dependencies]
