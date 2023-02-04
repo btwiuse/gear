@@ -9521,7 +9521,7 @@ dependencies = [
 [[package]]
 name = "sp-core"
 version = "7.0.0"
-source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#91c367ee60303f878fead054d95b600cea222156"
+source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#dab82dc6e8ca3fe43616d857b260a42a73ec28ca"
 dependencies = [
  "array-bytes",
  "base58",
@@ -9566,7 +9566,7 @@ dependencies = [
 [[package]]
 name = "sp-core-hashing"
 version = "5.0.0"
-source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#91c367ee60303f878fead054d95b600cea222156"
+source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#dab82dc6e8ca3fe43616d857b260a42a73ec28ca"
 dependencies = [
  "blake2",
  "byteorder",
@@ -9600,7 +9600,7 @@ dependencies = [
 [[package]]
 name = "sp-debug-derive"
 version = "5.0.0"
-source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#91c367ee60303f878fead054d95b600cea222156"
+source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#dab82dc6e8ca3fe43616d857b260a42a73ec28ca"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -9610,7 +9610,7 @@ dependencies = [
 [[package]]
 name = "sp-externalities"
 version = "0.13.0"
-source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#91c367ee60303f878fead054d95b600cea222156"
+source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#dab82dc6e8ca3fe43616d857b260a42a73ec28ca"
 dependencies = [
  "environmental",
  "parity-scale-codec",
@@ -9769,7 +9769,7 @@ dependencies = [
 [[package]]
 name = "sp-runtime-interface"
 version = "7.0.0"
-source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#91c367ee60303f878fead054d95b600cea222156"
+source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#dab82dc6e8ca3fe43616d857b260a42a73ec28ca"
 dependencies = [
  "bytes",
  "impl-trait-for-tuples",
@@ -9787,7 +9787,7 @@ dependencies = [
 [[package]]
 name = "sp-runtime-interface-proc-macro"
 version = "6.0.0"
-source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#91c367ee60303f878fead054d95b600cea222156"
+source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#dab82dc6e8ca3fe43616d857b260a42a73ec28ca"
 dependencies = [
  "Inflector",
  "proc-macro-crate 1.2.1",
@@ -9861,12 +9861,12 @@ dependencies = [
 [[package]]
 name = "sp-std"
 version = "5.0.0"
-source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#91c367ee60303f878fead054d95b600cea222156"
+source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#dab82dc6e8ca3fe43616d857b260a42a73ec28ca"
 
 [[package]]
 name = "sp-storage"
 version = "7.0.0"
-source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#91c367ee60303f878fead054d95b600cea222156"
+source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#dab82dc6e8ca3fe43616d857b260a42a73ec28ca"
 dependencies = [
  "impl-serde",
  "parity-scale-codec",
@@ -9895,7 +9895,7 @@ dependencies = [
 [[package]]
 name = "sp-tracing"
 version = "6.0.0"
-source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#91c367ee60303f878fead054d95b600cea222156"
+source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#dab82dc6e8ca3fe43616d857b260a42a73ec28ca"
 dependencies = [
  "parity-scale-codec",
  "sp-std",
@@ -9983,7 +9983,7 @@ dependencies = [
 [[package]]
 name = "sp-wasm-interface"
 version = "7.0.0"
-source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#91c367ee60303f878fead054d95b600cea222156"
+source = "git+https://github.com/gear-tech/substrate.git?branch=gear-polkadot-v0.9.36#dab82dc6e8ca3fe43616d857b260a42a73ec28ca"
 dependencies = [
  "impl-trait-for-tuples",
  "log",
@@ -10671,9 +10671,9 @@ checksum = "cda74da7e1a664f795bb1f8a87ec406fb89a02522cf6e50620d016add6dbbf5c"
 
 [[package]]
 name = "tokio"
-version = "1.24.1"
+version = "1.24.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1d9f76183f91ecfb55e1d7d5602bd1d979e38a3a522fe900241cf195624d67ae"
+checksum = "597a12a59981d9e3c38d216785b0c37399f6e415e8d0712047620f189371b0bb"
 dependencies = [
  "autocfg",
  "bytes",
