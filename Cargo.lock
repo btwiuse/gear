@@ -3542,7 +3542,7 @@ dependencies = [
 name = "gear-bags-thresholds"
 version = "1.0.0"
 dependencies = [
- "clap 3.2.23",
+ "clap 4.1.4",
  "generate-bags",
  "vara-runtime",
 ]
