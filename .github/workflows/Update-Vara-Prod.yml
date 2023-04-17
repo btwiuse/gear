@@ -17,7 +17,7 @@ jobs:
 
       - name: Create image tag
         id: image-tag
-        run: echo "tag=ghcr.io/gear-tech/node-vara:0.1.0-`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_OUTPUT
+        run: echo "tag=ghcr.io/gear-tech/node-vara:`cargo pkgid -p gear-cli | cut -d @ -f 2`-`echo ${GITHUB_SHA} | cut -c1-11`" >> $GITHUB_OUTPUT
         
   docker:
     runs-on: ubuntu-latest
