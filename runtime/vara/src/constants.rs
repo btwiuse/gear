@@ -61,7 +61,7 @@ pub mod time {
     ///
     /// <https://research.web3.foundation/en/latest/polkadot/BABE/Babe/#6-practical-results>
 
-    pub const MILLISECS_PER_BLOCK: Moment = 1000;
+    pub const MILLISECS_PER_BLOCK: Moment = 3000;
 
     // Milliseconds per year for the Julian year (365.25 days).
     pub const MILLISECONDS_PER_YEAR: u64 = 1000 * 3600 * 24 * 36525 / 100;
