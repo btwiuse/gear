@@ -155,7 +155,6 @@ pub fn local_testnet_config() -> Result<ChainSpec, String> {
                     get_account_id_from_seed::<sr25519::Public>("Charlie"),
                     get_account_id_from_seed::<sr25519::Public>("Dave"),
                     get_account_id_from_seed::<sr25519::Public>("Eve"),
-                    get_account_id_from_seed::<sr25519::Public>("Ferdie"),
                 ],
                 BANK_ADDRESS.into(),
                 true,
@@ -686,7 +685,7 @@ fn testnet_genesis(
     bank_account: AccountId,
     _enable_println: bool,
 ) -> GenesisConfig {
-    const ENDOWMENT: u128 = 1_000_000 * TOKEN;
+    const ENDOWMENT: u128 = 1_000_000_000_000 * TOKEN;
     const STASH: u128 = 100 * TOKEN;
     const MIN_NOMINATOR_BOND: u128 = 50 * TOKEN;
 
