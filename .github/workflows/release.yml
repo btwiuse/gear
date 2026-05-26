@@ -45,7 +45,7 @@ jobs:
     runs-on: [ kuberunner ]
     steps:
       - name: "Actions: Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.event.inputs.tag_name }}
 
@@ -107,7 +107,7 @@ jobs:
           sha256sum artifact/testnet_vara_runtime_v$VARA_SPEC.wasm
 
       - name: Publish
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: artifact/*
           tag_name: ${{ github.event.inputs.tag_name }}
@@ -121,7 +121,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Dispatch Multiplatform Build Workflow
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           github-token: ${{ env.GITHUB_TOKEN }}
           script: |
@@ -141,7 +141,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Dispatch Docker Build Workflow
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           github-token: ${{ env.GITHUB_TOKEN }}
           script: |
