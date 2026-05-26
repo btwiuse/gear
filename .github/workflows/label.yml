@@ -16,7 +16,7 @@ jobs:
       || github.event.label.name == 'E2-forcemacos'
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Fork Linux checks
         if: >-

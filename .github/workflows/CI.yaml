@@ -35,7 +35,7 @@ jobs:
     needs: build
     steps:
       - name: Download artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
 
       - name: Delete previous release
         uses: dev-drprasad/delete-tag-and-release@v1.1
@@ -49,7 +49,7 @@ jobs:
         run: sleep 10
 
       - name: Upload
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: true

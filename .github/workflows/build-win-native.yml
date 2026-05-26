@@ -30,7 +30,7 @@ jobs:
         shell: msys2 {0}
     steps:
       - name: "ACTIONS: Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: "Install: Setup MSYS2 environment"
         uses: msys2/setup-msys2@v2
@@ -39,7 +39,7 @@ jobs:
           install: procps
 
       - name: "Install: Packages from Scoop"
-        uses: MinoruSekine/setup-scoop@v4.0.1
+        uses: MinoruSekine/setup-scoop@v4.0.2
         with:
           apps: >-
             perl

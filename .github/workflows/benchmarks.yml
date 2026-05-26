@@ -40,7 +40,7 @@ jobs:
       available_region: ${{ steps.get-region.outputs.available_region }}
     steps:
     - name: AWS Login
-      uses: aws-actions/configure-aws-credentials@v4
+      uses: aws-actions/configure-aws-credentials@v6
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -59,7 +59,7 @@ jobs:
         echo "::add-mask::$TOKEN"
 
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
     - name: Check Capacity
       id: get-region
@@ -90,7 +90,7 @@ jobs:
         fi
 
     - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v3
+      uses: hashicorp/setup-terraform@v4
 
     - name: Terraform Apply
       timeout-minutes: 30
@@ -123,7 +123,7 @@ jobs:
       RUSTUP_HOME: /tmp/rustup_home
     steps:
       - name: "ACTIONS: Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: "Install: Rust toolchain"
         uses: dsherret/rust-toolchain-file@v1
@@ -166,14 +166,14 @@ jobs:
 
       - name: "ACTIONS: Upload artifact with benchmarking errors (if exist)"
         if: ${{ always() }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: benchmarking-errors
           path: scripts/benchmarking/benchmarking_errors.txt
           if-no-files-found: ignore
 
       - name: "ACTIONS: Upload artifact with updated weights (vara)"
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: weights-vara
           path: |
@@ -186,7 +186,7 @@ jobs:
 
       - name: Create commit
         if: ${{ inputs.change-type == 'commit' }}
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: >-
             chore(runtime): update weights
@@ -194,7 +194,7 @@ jobs:
 
       - name: Create Pull Request
         if: ${{ inputs.change-type == 'pull_request' }}
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           add-paths: |
             core/src/gas_metering/
@@ -219,19 +219,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: AWS Login
-      uses: aws-actions/configure-aws-credentials@v4
+      uses: aws-actions/configure-aws-credentials@v6
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-west-2
 
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         sparse-checkout: terraform
 
     - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v3
+      uses: hashicorp/setup-terraform@v4
 
     - name: Terraform Destroy
       timeout-minutes: 60

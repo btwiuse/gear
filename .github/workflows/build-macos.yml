@@ -34,7 +34,7 @@ jobs:
       RUSTUP_HOME: /tmp/rustup_home
     steps:
       - name: "ACTIONS: Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: "Install: Packages"
         run: brew install protobuf binaryen

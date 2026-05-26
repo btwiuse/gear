@@ -67,7 +67,7 @@ jobs:
       RUSTUP_HOME: /tmp/rustup_home
     steps:
       - name: "ACTIONS: Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: "Install: Set cargo path"
         run: echo "/tmp/cargo/bin" >> $GITHUB_PATH
@@ -178,7 +178,7 @@ jobs:
 
       - name: Upload artifacts
         if: ${{ github.event_name == 'push' && inputs.production && matrix.profiles.name == 'release' }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           path: artifact
 
@@ -197,7 +197,7 @@ jobs:
       CARGO_REGISTRIES_CRATES_IO_PROTOCOL: sparse
     steps:
       - name: "ACTIONS: Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: "Install: Set cargo path"
         run: echo "/tmp/cargo/bin" >> $GITHUB_PATH

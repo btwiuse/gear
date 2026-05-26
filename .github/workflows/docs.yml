@@ -16,7 +16,7 @@ jobs:
     env:
       RUSTUP_HOME: /tmp/rustup_home
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/docs
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
