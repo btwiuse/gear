@@ -12754,7 +12754,7 @@ checksum = "2e8b432585672228923edbbf64b8b12c14e1112f62e88737655b4a083dbcd78e"
 dependencies = [
  "bytes",
  "pin-project-lite",
- "quinn-proto 0.9.4",
+ "quinn-proto 0.9.6",
  "quinn-udp 0.3.2",
  "rustc-hash 1.1.0",
  "rustls 0.20.8",
@@ -12802,9 +12802,9 @@ dependencies = [
 
 [[package]]
 name = "quinn-proto"
-version = "0.9.4"
+version = "0.9.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f31999cfc7927c4e212e60fd50934ab40e8e8bfd2d493d6095d2d306bc0764d9"
+checksum = "94b0b33c13a79f669c85defaf4c275dc86a0c0372807d0ca3d78e0bb87274863"
 dependencies = [
  "bytes",
  "rand",
@@ -12859,7 +12859,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "641538578b21f5e5c8ea733b736895576d0fe329bb883b937db6f4d163dbaaf4"
 dependencies = [
  "libc",
- "quinn-proto 0.9.4",
+ "quinn-proto 0.9.6",
  "socket2 0.4.9",
  "tracing",
  "windows-sys 0.42.0",
